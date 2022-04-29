@@ -1,0 +1,13 @@
+server:
+  port: 8765
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: core-service
+          uri: lb://core-service
+          predicates:
+            - Path=/core/**
+          filters:
+            - StripPrefix=1
