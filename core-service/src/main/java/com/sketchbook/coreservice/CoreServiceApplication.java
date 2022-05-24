@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableEurekaClient
 @EnableWebMvc
 @EnableFeignClients
+//@Import(DataSourceAutoConfiguration.class) // NOTE: allows to use JDBC and R2DBC at the same time
 public class CoreServiceApplication {
 
     public static void main(String[] args) {

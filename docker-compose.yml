@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    container_name: microservice-sketchbook-async-postgres-container
+    command: postgres -c 'max_connections=500'
+    environment:
+      POSTGRES_USER: mssk
+      POSTGRES_PASSWORD: mssk
+      POSTGRES_DB: mssk
+    volumes:
+      - microservice-sketchbook-async-postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  microservice-sketchbook-async-postgres-data:
+    driver: local

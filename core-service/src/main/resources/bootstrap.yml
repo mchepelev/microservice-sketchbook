@@ -14,3 +14,22 @@ spring:
         enabled: true
         serviceId: configserver
       fail-fast: true
+
+#  main:
+#    allow-bean-definition-overriding: true
+
+# don't work with r2dbc. use java config
+#  datasource:
+#    username: mssk
+#    password: mssk
+#    url: jdbc:postgresql://localhost:5432/mssk
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: postgresql
+
+# could be used. but now java config is used
+#  r2dbc:
+#    url: r2dbc:postgresql://localhost:5432/mssk
+#    username: mssk
+#    password: mssk
