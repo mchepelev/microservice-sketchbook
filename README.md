@@ -51,3 +51,11 @@ The only solution that worked for me is **Java based config** for JPA and JDBC.
 R2DBC could be configured using yml or java class. For consistency java based config is used
 
 JPA and R2DBC couldn't use same entities. Entities look pretty similar, but use different annotations.
+
+### Java WebFlux multi tenant
+
+In reactive-multitenant service
+
+TenantFilter provide context to Mono that will be used in all Monos related to TenantFilter.
+
+**OQ:** PostgresqlConnectionFactory schema not working for unknown reason (see UserTemplateRepository) 

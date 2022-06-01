@@ -17,3 +17,9 @@ spring:
             - Path=/reactive/**
           filters:
             - StripPrefix=1
+        - id: reactive-multitenant-service
+          uri: lb://reactive-multitenant-service
+          predicates:
+            - Path=/reactive-multitenant/**
+          filters:
+            - StripPrefix=1

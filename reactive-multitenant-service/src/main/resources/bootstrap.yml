@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: reactive-multitenant-service
+  profiles:
+    active: local
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: configserver
+      fail-fast: true
+
