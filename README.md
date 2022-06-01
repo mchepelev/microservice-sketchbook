@@ -14,11 +14,29 @@ How to start:
 2. run eureka
 3. run tests from core-service
 
+### Java WebFlux
+
+In reactive service
+
+Unit tests and endpoints using real db. (create db using docker compose and generate-test-*.sql files)
+
+See endpoints processing in *example* package.
+There are two types of endpoints *@Controller* and *routing/handler*.
+To test endpoints use Postman.
+
+See reactive db usage in *r2dbc* package.
+There are two approaches: *CrudeRepository* style and *"r2dbcTemplate"* style.
+*"r2dbcTemplate"* style works only if in DB id column has bigserial type.
+To test repositories use tests.
+
+In OfficeService.class you can find *@Transactional* example.
+To Test use Postman.
+
 ### Java reactive repository alongside with jpa and jdbc repositories
 
 In core service
 
-Unit tests using real db. (create db using docker compose and generate-*.sql files)
+Unit tests using real db. (create db using docker compose and generate-test-*.sql files)
 
 *Didn't find way to start using bootstrap config. See details below*
 

@@ -11,3 +11,9 @@ spring:
             - Path=/core/**
           filters:
             - StripPrefix=1
+        - id: reactive-service
+          uri: lb://reactive-service
+          predicates:
+            - Path=/reactive/**
+          filters:
+            - StripPrefix=1
